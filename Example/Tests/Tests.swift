@@ -1,5 +1,5 @@
 import XCTest
-import SDMailComposer
+
 
 class Tests: XCTestCase {
     

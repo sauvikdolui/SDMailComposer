@@ -1,0 +1,6 @@
+framework module Pods_SDMailComposer_Example {
+  umbrella header "Pods-SDMailComposer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

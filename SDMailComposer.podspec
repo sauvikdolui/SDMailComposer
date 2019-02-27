@@ -9,7 +9,8 @@
 Pod::Spec.new do |s|
   s.name             = 'SDMailComposer'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SDMailComposer.'
+  s.summary          = 'A utility mail composer library for iOS to open most popular mail applications from your app.'
+  s.swift_version    = '4.2'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +19,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+ A utility mail composer library for iOS to open most popular mail applications from your app. Install this library to open AppleMail, Gmail, Yahoo Mail and MS Outlook from your application. You can provide optional recipient, carbon copy (cc), blind carbon copy (bcc) list along with optional subject line and body content.
                        DESC
 
   s.homepage         = 'https://github.com/sauvikdolui/SDMailComposer'
@@ -37,6 +38,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

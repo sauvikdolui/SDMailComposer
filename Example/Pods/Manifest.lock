@@ -1,0 +1,16 @@
+PODS:
+  - SDMailComposer (0.1.0)
+
+DEPENDENCIES:
+  - SDMailComposer (from `../`)
+
+EXTERNAL SOURCES:
+  SDMailComposer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SDMailComposer: c07ff5a43792a5f26791bd5ed4c19513218eed9a
+
+PODFILE CHECKSUM: 3cce86959ce30b55716ccfed1b2f86137e87c4ac
+
+COCOAPODS: 1.5.3

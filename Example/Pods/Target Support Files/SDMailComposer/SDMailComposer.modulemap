@@ -1,0 +1,6 @@
+framework module SDMailComposer {
+  umbrella header "SDMailComposer-umbrella.h"
+
+  export *
+  module * { export * }
+}
