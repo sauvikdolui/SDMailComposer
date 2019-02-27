@@ -229,6 +229,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 2XSUX2WMBS;
 						LastSwiftMigration = 1010;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -534,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 222D34A91ED9C34FA1B5D4F7 /* Pods-SDMailComposer_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2XSUX2WMBS;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -552,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C7677108BF824143B5B9FCA /* Pods-SDMailComposer_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2XSUX2WMBS;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
