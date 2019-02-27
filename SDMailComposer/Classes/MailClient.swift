@@ -21,17 +21,17 @@ public enum MailClientType: CaseIterable {
     case yahooMail
     
     /// Name associated with type of `MailClientType`
-    var name: String {
+    public var name: String {
         switch self {
-        case .appleMail:            return "iOS Mail"
-        case .msOutlook:            return "MS Outlook"
-        case .gmail:                return "GMail"
+        case .appleMail:            return "Apple Mail"
+        case .msOutlook:            return "Outlook"
+        case .gmail:                return "Gmail"
         case .yahooMail:            return "Yahoo Mail"
         }
     }
     
     /// The client associated with `MailClientType`
-    var client: MailClient {
+    public var client: MailClient {
         switch self {
         case .appleMail:            return AppleMail()
         case .msOutlook:            return MSOutlook()
@@ -85,6 +85,7 @@ public struct AppleMail: MailClient {
         guard let url = URL(string: urlString) else { throw MailComposerError.openURLGenerationError(urlString) }
         return url
     }
+
 }
 
 
@@ -139,6 +140,8 @@ public extension MailClient {
     public var urlSubjectKey: String? { return "subject" }
     /// Key to be used for body
     public var urlBodyKey: String? { return "body" }
+    
+    
     
     /// Prepares url query for recipient list
     ///

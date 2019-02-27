@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Mail Composer Table View-->
+        <!--SDMailComposer-->
         <scene sceneID="zdU-Vc-bNC">
             <objects>
                 <tableViewController id="8QG-PY-CSS" customClass="SDMailComposerTableView" customModule="SDMailComposerExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="8QG-PY-CSS" id="577-7K-0Qg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jhX-d9-g01"/>
+                    <navigationItem key="navigationItem" title="SDMailComposer" id="jhX-d9-g01"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wai-xd-Wzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
