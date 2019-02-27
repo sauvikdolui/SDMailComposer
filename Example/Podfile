@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SDMailComposer_Example' do
+  pod 'SDMailComposer', :path => '../'
+
+  target 'SDMailComposer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
