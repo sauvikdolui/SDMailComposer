@@ -24,7 +24,7 @@ public enum MailClientType: CaseIterable {
     public var name: String {
         switch self {
         case .appleMail:            return "Apple Mail"
-        case .msOutlook:            return "Outlook"
+        case .msOutlook:            return "MS Outlook"
         case .gmail:                return "Gmail"
         case .yahooMail:            return "Yahoo Mail"
         }
@@ -53,7 +53,6 @@ public struct AppleMail: MailClient {
     public var urlRoot: String { return "" }
     /// `urlRecipientKey` of Apple Mail, it `nil`
     public var urlRecipientKey: String? { return nil }
-    
     
     /// Creates a final URL to present the `MailComposer`
     ///
@@ -97,6 +96,7 @@ public struct MSOutlook: MailClient {
     public var scheme: String { return "ms-outlook:" }
     /// `urlRoot` of the Mail Client to be appended after scheme
     public var urlRoot: String { return "//compose" }
+
 }
 
 /// Google's mail client
@@ -107,6 +107,7 @@ public struct Gmail: MailClient {
     public var scheme: String { return "googlegmail:" }
     /// `urlRoot` of the Mail Client to be appended after scheme
     public var urlRoot: String { return "///co" }
+
 }
 
 
@@ -118,6 +119,7 @@ public struct YahooMail: MailClient {
     public var scheme: String { return "ymail:" }
     /// `urlRoot` of the Mail Client to be appended after scheme
     public var urlRoot: String { return "//mail/compose" }
+    
 }
 
 
@@ -140,7 +142,6 @@ public extension MailClient {
     public var urlSubjectKey: String? { return "subject" }
     /// Key to be used for body
     public var urlBodyKey: String? { return "body" }
-    
     
     
     /// Prepares url query for recipient list
@@ -214,7 +215,6 @@ public extension MailClient {
         guard let url = URL(string: urlString) else { throw MailComposerError.openURLGenerationError(baseURL) }
         return url
     }
-
     
 }
 

@@ -7,9 +7,7 @@
 //
 
 import XCTest
-
 import SDMailComposer
-
 
 class MailComposerTest: XCTestCase {
 
@@ -20,6 +18,13 @@ class MailComposerTest: XCTestCase {
     let body = "This is sample body content"
     let nilParamComposer = MailComposer()
     var fullParamComposer: MailComposer!
+    
+    let appleMailClient = MailClientType.appleMail.client
+    let gmailMailClient = MailClientType.gmail.client
+    let msoutlookMailClient = MailClientType.msOutlook.client
+    let yahooMailClient = MailClientType.yahooMail.client
+
+
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -55,16 +60,16 @@ class MailComposerTest: XCTestCase {
 
     // MARK: - Availability Checking
     func test_client_availability_on_device() {
-        XCTAssertTrue(MailComposer.isClient(AppleMail(), availableFor: UIApplicationMailComposerDeviceMock()), "Apple Mail must be available, it's installed")
-        XCTAssertTrue(MailComposer.isClient(Gmail(), availableFor: UIApplicationMailComposerDeviceMock()), "Gmail Mail must be available, it's installed")
-        XCTAssertTrue(MailComposer.isClient(YahooMail(), availableFor: UIApplicationMailComposerDeviceMock()), "Yahoo Mail must be available, it's installed")
-        XCTAssertTrue(MailComposer.isClient(MSOutlook(), availableFor: UIApplicationMailComposerDeviceMock()), "Outlook Mail must be available, it's installed")
+        XCTAssertTrue(MailComposer.isClient(appleMailClient, availableFor: UIApplicationMailComposerDeviceMock()), "Apple Mail must be available, it's installed")
+        XCTAssertTrue(MailComposer.isClient(gmailMailClient, availableFor: UIApplicationMailComposerDeviceMock()), "Gmail Mail must be available, it's installed")
+        XCTAssertTrue(MailComposer.isClient(yahooMailClient, availableFor: UIApplicationMailComposerDeviceMock()), "Yahoo Mail must be available, it's installed")
+        XCTAssertTrue(MailComposer.isClient(msoutlookMailClient, availableFor: UIApplicationMailComposerDeviceMock()), "Outlook Mail must be available, it's installed")
     }
     func test_client_availability_on_simulator() {
-        XCTAssertFalse(MailComposer.isClient(AppleMail(), availableFor: UIApplicationMailComposerSimlulatorMock()), "Apple Mail must not be available on simulator")
-        XCTAssertFalse(MailComposer.isClient(Gmail(), availableFor: UIApplicationMailComposerSimlulatorMock()), "Gmail Mail must not be available on simulator")
-        XCTAssertFalse(MailComposer.isClient(YahooMail(), availableFor: UIApplicationMailComposerSimlulatorMock()), "Yahoo Mail must not be available on simulator")
-        XCTAssertFalse(MailComposer.isClient(MSOutlook(), availableFor: UIApplicationMailComposerSimlulatorMock()), "Outlook Mail must not be available on simulator")
+        XCTAssertFalse(MailComposer.isClient(appleMailClient, availableFor: UIApplicationMailComposerSimlulatorMock()), "Apple Mail must not be available on simulator")
+        XCTAssertFalse(MailComposer.isClient(gmailMailClient, availableFor: UIApplicationMailComposerSimlulatorMock()), "Gmail Mail must not be available on simulator")
+        XCTAssertFalse(MailComposer.isClient(yahooMailClient, availableFor: UIApplicationMailComposerSimlulatorMock()), "Yahoo Mail must not be available on simulator")
+        XCTAssertFalse(MailComposer.isClient(msoutlookMailClient, availableFor: UIApplicationMailComposerSimlulatorMock()), "Outlook Mail must not be available on simulator")
     }
     
     // MARK: - Composer presentation testing
@@ -76,7 +81,7 @@ class MailComposerTest: XCTestCase {
                                          subject: subject,
                                          body: body)
         do {
-            try composer.present(client: Gmail(), fromApplication: UIApplicationMailComposerDeviceMock(), completion: { (success) in
+            try composer.present(client: gmailMailClient, fromApplication: UIApplicationMailComposerDeviceMock(), completion: { (success) in
                 if success { expectation.fulfill() }
             })
         } catch {
@@ -116,12 +121,12 @@ class MailComposerTest: XCTestCase {
                                     body: body)
         
         do {
-            try composer.present(client: AppleMail(), fromApplication: UIApplicationMailComposerSimlulatorMock(), completion: { (success) in
+            try composer.present(client: appleMailClient, fromApplication: UIApplicationMailComposerSimlulatorMock(), completion: { (success) in
                 XCTFail("Simulator do not have any mail client installed")
             })
     
         } catch MailComposerError.clientNotInstalled(let clientName) {
-            if clientName == AppleMail().name { expectation.fulfill() }
+            if clientName == appleMailClient.name { expectation.fulfill() }
         } catch {
             XCTFail("Must not face any exception while presenting with UIApplicationMailComposerDeviceMock()")
         }

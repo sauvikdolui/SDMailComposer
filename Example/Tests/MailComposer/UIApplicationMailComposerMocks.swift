@@ -10,22 +10,21 @@ import Foundation
 import UIKit
 import SDMailComposer
 
-
-
-
 struct UIApplicationMailComposerDeviceMock: UIApplicationMailComposer {
+    
+    func openMailURL(_ url: URL, completionHandler: ((Bool) -> Void)?) {
+        completionHandler?(true)
+    }
+    
     func canOpenURL(_ url: URL) -> Bool {
         return true
-    }
-    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey : Any], completionHandler: ((Bool) -> Void)?) {
-        completionHandler?(true)
     }
 }
 struct UIApplicationMailComposerSimlulatorMock: UIApplicationMailComposer {
     func canOpenURL(_ url: URL) -> Bool {
         return false
     }
-    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey : Any], completionHandler: ((Bool) -> Void)?) {
-        completionHandler?(false)
+    func openMailURL(_ url: URL, completionHandler: ((Bool) -> Void)?) {
+        if canOpenURL(url) && completionHandler != nil { completionHandler!(true) }
     }
 }

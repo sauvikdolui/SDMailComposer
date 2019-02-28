@@ -35,10 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1412E9B6A0D64E9579F5288C /* Pods-SDMailComposer_Example-SDMailComposer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDMailComposer_Example-SDMailComposer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDMailComposer_Example-SDMailComposer_Tests/Pods-SDMailComposer_Example-SDMailComposer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		222D34A91ED9C34FA1B5D4F7 /* Pods-SDMailComposer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDMailComposer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDMailComposer_Tests/Pods-SDMailComposer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		42191A3ABF2B4F3936565D78 /* Pods-SDMailComposer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDMailComposer_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDMailComposer_Example/Pods-SDMailComposer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		44983E46C251CC19F6E9FEDA /* Pods_SDMailComposer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDMailComposer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53CDF4E52893D7705DB45B23 /* SDMailComposer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SDMailComposer.podspec; path = ../SDMailComposer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		571FE01860538E803E0EB66F /* Pods_SDMailComposer_Example_SDMailComposer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDMailComposer_Example_SDMailComposer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7677108BF824143B5B9FCA /* Pods-SDMailComposer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDMailComposer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDMailComposer_Tests/Pods-SDMailComposer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5C894A314E7CB435E7105115 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SDMailComposer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDMailComposer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +52,7 @@
 		607FACE51AFB9204008FA782 /* SDMailComposer_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDMailComposer_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8133431CC08F8B3006624629 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A6F31EB85FB1CB7AA80054F6 /* Pods-SDMailComposer_Example-SDMailComposer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDMailComposer_Example-SDMailComposer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDMailComposer_Example-SDMailComposer_Tests/Pods-SDMailComposer_Example-SDMailComposer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B8560C1B2226AD55008FDDF7 /* SDMailComposerTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDMailComposerTableView.swift; sourceTree = "<group>"; };
 		B8560C1E2226AFCE008FDDF7 /* MailClientCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailClientCellModel.swift; sourceTree = "<group>"; };
 		B8560C212226C435008FDDF7 /* EmailIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailIDs.swift; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 			children = (
 				E9F3D21F32016A38879B04F8 /* Pods_SDMailComposer_Example.framework */,
 				44983E46C251CC19F6E9FEDA /* Pods_SDMailComposer_Tests.framework */,
+				571FE01860538E803E0EB66F /* Pods_SDMailComposer_Example_SDMailComposer_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,6 +196,8 @@
 				42191A3ABF2B4F3936565D78 /* Pods-SDMailComposer_Example.release.xcconfig */,
 				222D34A91ED9C34FA1B5D4F7 /* Pods-SDMailComposer_Tests.debug.xcconfig */,
 				5C7677108BF824143B5B9FCA /* Pods-SDMailComposer_Tests.release.xcconfig */,
+				1412E9B6A0D64E9579F5288C /* Pods-SDMailComposer_Example-SDMailComposer_Tests.debug.xcconfig */,
+				A6F31EB85FB1CB7AA80054F6 /* Pods-SDMailComposer_Example-SDMailComposer_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				66E9AB35278136AB2852849F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,6 +308,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		66E9AB35278136AB2852849F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SDMailComposer_Tests/Pods-SDMailComposer_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDMailComposer/SDMailComposer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDMailComposer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDMailComposer_Tests/Pods-SDMailComposer_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6AE7447167137EB40F3450A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -568,7 +597,7 @@
 			baseConfigurationReference = 222D34A91ED9C34FA1B5D4F7 /* Pods-SDMailComposer_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 2XSUX2WMBS;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -587,7 +616,7 @@
 			baseConfigurationReference = 5C7677108BF824143B5B9FCA /* Pods-SDMailComposer_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 2XSUX2WMBS;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";

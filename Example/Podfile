@@ -1,11 +1,10 @@
+platform :ios, '9.3'
 use_frameworks!
 
 target 'SDMailComposer_Example' do
   pod 'SDMailComposer', :path => '../'
+end
 
-  target 'SDMailComposer_Tests' do
-    inherit! :search_paths
-
-    
-  end
+target 'SDMailComposer_Tests' do
+    pod 'SDMailComposer', :path => '../'
 end

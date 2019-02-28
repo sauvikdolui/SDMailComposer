@@ -29,7 +29,7 @@ public struct ValidityChecker {
     ///   - regexType: Regular expression type
     ///   - value: The string which is to be checked
     /// - Returns: true OR false based on validation check result
-    static func isValid(regexType: RegularExpressionType, value: String) -> Bool {
+    public static func isValid(regexType: RegularExpressionType, value: String) -> Bool {
         guard let regularExpression = try? NSRegularExpression(pattern: regexType.rawValue,
                                                                options: .caseInsensitive) else { return false }
         let matchCount = regularExpression.numberOfMatches(in: value,

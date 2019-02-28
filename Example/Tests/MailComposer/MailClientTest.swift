@@ -9,7 +9,6 @@
 import XCTest
 import SDMailComposer
 
-
 class MailClientTest: XCTestCase {
 
     let recipients = ["toaddress@email.com","example.exam@effective.digital"]
@@ -27,10 +26,10 @@ class MailClientTest: XCTestCase {
     }
 
     func test_MailClient_Type_Name(){
-        XCTAssertTrue(AppleMail().name == MailClientType.appleMail.name, "Mail Client Type Name must be same what used for initialization")
-        XCTAssertTrue(Gmail().name == MailClientType.gmail.name, "Mail Client Type Name must be same what used for initialization")
-        XCTAssertTrue(YahooMail().name == MailClientType.yahooMail.name, "Mail Client Type Name must be same what used for initialization")
-        XCTAssertTrue(YahooMail().name == MailClientType.yahooMail.name, "Mail Client Type Name must be same what used for initialization")
+        XCTAssertTrue(MailClientType.appleMail.client.name == "Apple Mail", "Mail Client Type Name must be same what used for initialization")
+        XCTAssertTrue(MailClientType.gmail.client.name == "Gmail", "Mail Client Type Name must be same what used for initialization")
+        XCTAssertTrue(MailClientType.msOutlook.client.name == "MS Outlook", "Mail Client Type Name must be same what used for initialization")
+        XCTAssertTrue(MailClientType.yahooMail.client.name == "Yahoo Mail", "Mail Client Type Name must be same what used for initialization")
         
     }
     func test_MailClient_Scheme() {
