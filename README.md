@@ -1,6 +1,6 @@
 # SDMailComposer
 
-[![CI Status](https://img.shields.io/travis/sauvikdolui/SDMailComposer.svg?style=flat)](https://travis-ci.org/sauvikdolui/SDMailComposer)
+[![Build Status](https://travis-ci.org/sauvikdolui/SDMailComposer.svg?branch=master)](https://travis-ci.org/sauvikdolui/SDMailComposer)
 [![Version](https://img.shields.io/cocoapods/v/SDMailComposer.svg?style=flat)](https://cocoapods.org/pods/SDMailComposer)
 [![License](https://img.shields.io/cocoapods/l/SDMailComposer.svg?style=flat)](https://cocoapods.org/pods/SDMailComposer)
 [![Platform](https://img.shields.io/cocoapods/p/SDMailComposer.svg?style=flat)](https://cocoapods.org/pods/SDMailComposer)
