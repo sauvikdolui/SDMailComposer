@@ -57,7 +57,10 @@ class SDMailComposerTableView: UITableViewController {
  
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        allClient.swapAt(fromIndexPath.row, to.row)
+        
+        let fromClient = allClient[fromIndexPath.row]
+        
+        print("Modified Sequence = \(allClient)")
     }
 
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -79,7 +82,7 @@ class SDMailComposerTableView: UITableViewController {
         default:
             presentMailClient(allClient.first!.client)
         }
-        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private func presentMailClient(_ client: MailClient) {
@@ -100,7 +103,6 @@ class SDMailComposerTableView: UITableViewController {
                         print("Mail Composer presentation error")
                     }
             })
-            
         } catch MailComposerError.installedClientListEmpty {
             print("No mail client was found")
         } catch MailComposerError.openURLGenerationError(let absoluteString) {
@@ -111,8 +113,4 @@ class SDMailComposerTableView: UITableViewController {
             print("Mail Composer Presentation Error: \(error.localizedDescription)")
         }
     }
-    
-    
-    
-
 }
