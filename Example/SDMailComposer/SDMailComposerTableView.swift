@@ -17,7 +17,7 @@ class SDMailComposerTableView: UITableViewController {
     let subjectLine = "Subject Line"
     let mailBody = "This is the sample body"
     
-    var allClient = MailClientCellModel.getAppModels()
+    var allClients = MailClientCellModel.getAppModels()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class SDMailComposerTableView: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allClient.count + 1 // last one for Present with preference
+        return allClients.count + 1 // last one for Present with preference
     }
 
 
@@ -38,9 +38,9 @@ class SDMailComposerTableView: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
         switch indexPath.row {
-        case let index where index < allClient.count :
-            cell.imageView?.image = UIImage(named: allClient[index].imageFile)
-            cell.textLabel?.text = allClient[index].name
+        case let index where index < allClients.count :
+            cell.imageView?.image = UIImage(named: allClients[index].imageFile)
+            cell.textLabel?.text = allClients[index].name
         default:
             cell.textLabel?.text = "Present from preference"
         }
@@ -52,15 +52,15 @@ class SDMailComposerTableView: UITableViewController {
 
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return indexPath.row != 4 ? true : false // Present from preference is not rearrangable
+        return indexPath.row != allClients.count ? true : false // Present from preference is not rearrangable
     }
  
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         
-        let fromClient = allClient[fromIndexPath.row]
-        
-        print("Modified Sequence = \(allClient)")
+        let fromClient = allClients.remove(at: fromIndexPath.row)
+        allClients.insert(fromClient, at: to.row)
+        print("Modified Sequence = \(allClients)")
     }
 
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -70,17 +70,17 @@ class SDMailComposerTableView: UITableViewController {
     
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return indexPath.row != 4 ? true : false // Present from preference is not rearrangable
+        return indexPath.row != allClients.count ? true : false // Present from preference is not rearrangable
     }
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard !allClient.isEmpty else { return }
+        guard !allClients.isEmpty else { return }
         switch indexPath.row {
-        case let index where index < allClient.count :
-            presentMailClient(allClient[index].client)
+        case let index where index < allClients.count :
+            presentMailClient(allClients[index].client)
         default:
-            presentMailClient(allClient.first!.client)
+            presentMailClient(allClients.first!.client)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
